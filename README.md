@@ -19,6 +19,63 @@
 
 -----------------------------------
 
+# Build Instructions
+## Prerequisites
+* Install MySQL Server and Workbench v-8.0 and above
+* Java JDK v-8 and above
+* Maven v-3.6.3 and above
+* Node.js v-15.6.0 and above
+## Installation
+* Go to GitHub Link: https://github.com/Beste-Guney/student-club-manager
+* Download the zip file of the project and open it with preferably IntelliJ Ultimate
+on your local device
+## Database Setup
+* Open MySQL Workbench and from Management section choose data import
+* Choose import from self-contained file
+* Choose the demo database we have provided you ( db_export.sql). You can
+find this file in the zip folder you have downloaded.
+* Choose the default target schema. Do not forget the schema name as you will
+be needing it later on
+* Choose dump with structures and data
+* Click to start the import
+* When it is done, your tables should be downloaded to the database.
+## Running
+* In IntelliJ, go to src/main/resources/application.properties. In this file, choose
+the correct database name for the connection which you should have already
+set up in the previous step.
+
+## Note: we assume that your MySQL server runs at port 3306. If it is not, you
+should edit as well.
+Figure 44: IntelliJ screen for setting up database environment
+* At IntelliJ Ultimate, open a terminal and go to the frontend directory
+* Run the following command: npm install
+* Run the backend spring project ( by the run button on the uppermost right
+corner)
+* When the installation and running of the backend project is done, return to the
+terminal and run the following command: npm start
+## Check Provided Data
+* Once the project is up and running on localhost:3000, you can use the
+following credentials for logging in or you can sign up by yourself as a student.
+* For Student Login:
+username: user1
+password: 123456
+For Advisor Login:
+username: advisor1
+password: 123456
+* For Admin Login:
+username: admin
+password: 123456
+## Important Note: One cannot signup as an admin or advisor. For admin login,
+you have to use the provided admin credentials and advisors will be signed up
+by the admin.
+Also, there exists 3 users (user1,user2,user3) with the same
+passwords(123456), 3 advisors (advisor1,advisor2,advisor3) with the same
+passwords(123456). You can login by using these credentials.
+You can check the rest of the existing data by the database. For simplicity,
+you can inspect the database from IntelliJ.
+
+-------------------------------
+
 # Plans for the project:
 
 There will be two main actors in the system: Clubs and Students.
